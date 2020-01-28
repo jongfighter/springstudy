@@ -1,0 +1,24 @@
+package com.kimchi;
+
+import java.util.List;
+
+public class Project {
+    private List<String> srcDirs;
+    private BuildRunner buildRunner;
+    private String binDir;
+
+    public void build() {
+        buildRunner.build(srcDirs, binDir);
+    }
+
+    public void setSrcDirs(List<String> srcDirs) {
+        this.srcDirs = srcDirs;
+    }
+    public void setBinDir(String binDir) {
+        this.binDir = binDir;
+    }
+    public void  setBuildRunner(BuildRunner buildRunner) {
+        this.buildRunner = buildRunner;
+    }
+
+}
